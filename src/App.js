@@ -28,7 +28,7 @@ function App() {
     const pokemonNaoEvoluido = {
         name: 'Pikachu',
         type: 'Electric',
-        evolved: false,
+        evolved: true,
         weight: 6.0,
         color: 'Yellow',
         image: 'https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png',
@@ -38,7 +38,7 @@ function App() {
     const pokemonEvoluido = {
         ...pokemonNaoEvoluido,
         name: 'Raichu',
-        evolves: false,
+        evolved: false,
         weight: 30,
         image: 'https://archives.bulbagarden.net/media/upload/thumb/b/b0/0026Raichu.png/250px-0026Raichu.png',
         id: 26,
