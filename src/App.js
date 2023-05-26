@@ -51,7 +51,7 @@ function App() {
         evolved: true,
         weight: 7.5,
         color: 'pink',
-        image: 'https://archives.bulbagarden.net/media/upload/thumb/b/b7/0035Clefairy.png/250px-0035Clefairy.png',
+        image: 'https://archives.bulbagarden.net/media/upload/b/b7/0035Clefairy.png',
         id: 35,
     };
     const clefable = {
