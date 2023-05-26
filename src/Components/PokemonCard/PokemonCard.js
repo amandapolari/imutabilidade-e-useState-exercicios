@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, PokemonName, PokemonType, EvolveButton, Img } from './styles';
 
-const PokemonCard = ({ pokemon, evoluiPokemons }) => {
+const PokemonCard = ({ pokemon, setPokemon, pokemonEvoluido }) => {
     const { name, type, weight, color, image } = pokemon;
 
     const evoluirPokemon = () => {
         console.log('Cliquei no botão de evoluir');
-        evoluiPokemons()
+        setPokemon(pokemonEvoluido)
     };
 
     return (

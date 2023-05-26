@@ -47,18 +47,14 @@ function App() {
     // Criando os estados:
     const [pokemon, setPokemon] = useState(pokemonNaoEvoluido);
 
-    // Implemente a função de evoluir o Pokemon:
-    const evoluiPokemons = () => {
-        setPokemon(pokemonEvoluido);
-    };
-
     return (
         <>
             <GlobalStyles />
             <FlexContainer>
                 <PokemonCard
                     pokemon={pokemon}
-                    evoluiPokemons={evoluiPokemons}
+                    setPokemon={setPokemon}
+                    pokemonEvoluido={pokemonEvoluido}
                 />
             </FlexContainer>
         </>
