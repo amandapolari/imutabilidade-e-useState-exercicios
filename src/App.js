@@ -25,6 +25,7 @@ function App() {
     //   id: 0
     // }
 
+    // card 1
     const pikachu = {
         name: 'Pikachu',
         type: 'Electric',
@@ -44,8 +45,31 @@ function App() {
         id: 26,
     };
 
+    // card 2
+    const clefairy = {
+        name: 'Clefairy',
+        type: 'fairy',
+        evolved: true,
+        weight: 7.5,
+        color: 'pink',
+        image: 'https://archives.bulbagarden.net/media/upload/thumb/b/b7/0035Clefairy.png/250px-0035Clefairy.png',
+        id: 35,
+    };
+
+    const clefable = {
+        ...clefairy,
+        name: 'Clefable',
+        evolved: false,
+        weight: 40,
+        image: 'https://archives.bulbagarden.net/media/upload/thumb/a/a4/0036Clefable.png/250px-0036Clefable.png',
+        id: 36,
+    };
+
     // Criando os estados:
+    // card 1
     const [pikachuCard, setPikachuCard] = useState(pikachu);
+    // card 2
+    const [clefairyCard, setClefairyCard] = useState(clefairy);
 
     return (
         <>
@@ -55,6 +79,11 @@ function App() {
                     card={pikachuCard}
                     setCard={setPikachuCard}
                     evolution={raichu}
+                />
+                <PokemonCard
+                    card={clefairyCard}
+                    setCard={setClefairyCard}
+                    evolution={clefable}
                 />
             </FlexContainer>
         </>
