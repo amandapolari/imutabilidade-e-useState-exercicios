@@ -1,12 +1,11 @@
 import React from 'react';
 import { Card, PokemonName, PokemonType, EvolveButton, Img } from './styles';
 
-const PokemonCard = ({ pokemon, setPokemon, pokemonEvoluido }) => {
-    const { name, type, weight, color, image, evolved } = pokemon;
+const PokemonCard = ({ card, setCard, evolution }) => {
+    const { name, type, weight, color, image, evolved } = card;
 
     const evoluirPokemon = () => {
-        console.log('Cliquei no botão de evoluir');
-        evolved ? setPokemon(pokemonEvoluido) : alert('O pokemon não pode evoluir')
+        evolved ? setCard(evolution) : alert('O pokemon não pode evoluir');
     };
 
     return (
@@ -16,9 +15,7 @@ const PokemonCard = ({ pokemon, setPokemon, pokemonEvoluido }) => {
             <PokemonType>{type}</PokemonType>
             <p>{weight}kg</p>
 
-            <EvolveButton onClick={() => evoluirPokemon()}>
-                Evoluir!
-            </EvolveButton>
+            <EvolveButton onClick={evoluirPokemon}>Evoluir!</EvolveButton>
         </Card>
     );
 };

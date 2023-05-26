@@ -25,18 +25,18 @@ function App() {
     //   id: 0
     // }
 
-    const pokemonNaoEvoluido = {
+    const pikachu = {
         name: 'Pikachu',
         type: 'Electric',
         evolved: true,
-        weight: 6.0,
+        weight: 6,
         color: 'Yellow',
         image: 'https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png',
-        id: 25,
+        id: 26,
     };
 
-    const pokemonEvoluido = {
-        ...pokemonNaoEvoluido,
+    const raichu = {
+        ...pikachu,
         name: 'Raichu',
         evolved: false,
         weight: 30,
@@ -45,16 +45,16 @@ function App() {
     };
 
     // Criando os estados:
-    const [pokemon, setPokemon] = useState(pokemonNaoEvoluido);
+    const [pikachuCard, setPikachuCard] = useState(pikachu);
 
     return (
         <>
             <GlobalStyles />
             <FlexContainer>
                 <PokemonCard
-                    pokemon={pokemon}
-                    setPokemon={setPokemon}
-                    pokemonEvoluido={pokemonEvoluido}
+                    card={pikachuCard}
+                    setCard={setPikachuCard}
+                    evolution={raichu}
                 />
             </FlexContainer>
         </>
