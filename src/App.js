@@ -31,7 +31,7 @@ function App() {
         evolved: false,
         weight: 6.0,
         color: 'Yellow',
-        image: 'https://archives.bulbagarden.net/media/upload/archive/f/f3/20130810070434%210172Pichu.png',
+        image: 'https://archives.bulbagarden.net/media/upload/thumb/4/4a/0025Pikachu.png/250px-0025Pikachu.png',
         id: 25,
     };
 
@@ -44,11 +44,22 @@ function App() {
         id: 26,
     };
 
+    // Criando os estados:
+    const [pokemon, setPokemon] = useState(pokemonNaoEvoluido);
+
+    // Implemente a função de evoluir o Pokemon:
+    const evoluiPokemons = () => {
+        setPokemon(pokemonEvoluido);
+    };
+
     return (
         <>
             <GlobalStyles />
             <FlexContainer>
-                <PokemonCard pokemonNaoEvoluido={pokemonNaoEvoluido} />
+                <PokemonCard
+                    pokemon={pokemon}
+                    evoluiPokemons={evoluiPokemons}
+                />
             </FlexContainer>
         </>
     );
